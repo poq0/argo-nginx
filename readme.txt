@@ -29,6 +29,9 @@ argocd app sync argo-demo
 argocd app list
 kubectl get deployment -n argo-demo
 
+set auto-sync
+  argocd app set argo-demo --sync-policy automated
+
 
 kubectl apply -f k8s
 kubectl delete -f k8s
